@@ -1,0 +1,4 @@
+scipy==1.7.3
+numpy==1.21.6
+apache-beam==2.25.0
+tensorflow==1.15

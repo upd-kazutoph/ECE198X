@@ -1,0 +1,71 @@
+USE UBUNTU 18!!!!!!!!!!!!!! UBUNTU 20 for MAGENTA
+# TT-VAE-GAN (CQT)
+python3 preprocess-cqt.py --dataset ../data/BumbongCQT2P --n_spkrs 2
+
+python3 train.py --model_name BumbongCQT2 --dataset ../data/BumbongCQT2P --n_spkrs 2 --n_epochs 51
+
+*edited train.py from CUA due to CQT folder naming. line 56 57
+
+python3 inference.py --model_name BumbongCQT --epoch 51 --trg_id 2 --src_id 1 --wavdir ../../outputdir_cqt
+python3 inference.py --model_name BumbongCQT --epoch 51 --wavdir /mnt/d/tt-vae-gan/BambooDataAudio
+python3 inference.py --model_name BumbongCQT --epoch 51 --wavdir ../../BambooDataAudio
+
+#WORKS
+python3 inference.py --model_name BumbongCQT --epoch 50 --trg_id 2 --wavdir /mnt/c/DSP19XC/BambooDataAudio 
+
+gansynth_train --hparams='{"tfds_data_dir":"/mnt/d/THESIS_DUMP/gansubset", "train_root_dir":"/mnt/d/THESIS_DUMP/VAEGAN_INFER_CQT"}'
+gansynth_generate --ckpt_dir="/mnt/d/THESIS_DUMP/WAV2MEL2WAV" --output_dir=NEWOUT_MEL --midi_file=all_regular.mid
+
+
+python3 inference.py --model_name BumbongCQT2 --epoch 50 --trg_id 2 --wavdir "C:/DSP19XC/ProlongedData" --img_width 256
+
+python3 preprocess-cqt.py --dataset "C:\DSP19XC\vae-gan\voice_conversion\data\BumbongCQT10" --n_spkrs 2
+python3 train.py --model_name BumbongCQT10 --dataset "C:\DSP19XC\vae-gan\voice_conversion\data\BumbongCQT10" --n_spkrs 2 --n_epochs 51
+python3 train.py --model_name BumbongCQT10 --dataset ../data/BumbongCQT10 --n_spkrs 2 --n_epochs 51 --img_width 100 
+
+
+#ERROR IN AUDIO FILES?
+DATA 1-50: ALL GOOD
+DATA 101-120: ALL GOOD
+
+DATA 54: WARNING
+DATA 61: ERROR
+DATA 69: ERROR
+DATA 77: ERROR
+DATA 78: WARNING
+DATA 89: ERROR
+DATA 97: ERROR
+
+PREPROCESS.PY - UBUNTU18 OK
+
+python3 train.py --model_name BumbongCQTX2 --dataset ../data/BumbongCQTX2 --n_spkrs 2 --n_epochs 51 --img_height 120 --img_width 143 #WORKS #CAFFEELEAK
+python3 train.py --model_name BumbongCQTX2 --dataset ../data/BumbongCQTX2 --n_spkrs 2 --n_epochs 51 --img_height 120 --img_width 140 #OK
+python3 inference.py --model_name BumbongCQTX2 --epoch 50 --trg_id 2 --wavdir /mnt/c/DSP19XC/ProlongedData
+python3 inference.py --model_name BumbongCQTX2 --epoch 50 --trg_id 2 --wavdir "C:/DSP19XC/ProlongedData" --img_height 100
+
+
+INFERENCE: SEE LINE 60 NAMING
+INFERENCE: SEE LINE 197 198 for WAVDIR WIN vs UBUNTU18
+INFERENCE: SEE LINE 133 & 211 FOR CQT vs MEL
+
+ADD NP.REAL ON UTILS FOR CQT    ax[0].imshow(np.real(mel_in), interpolation="None", aspect='auto')
+
+CQT OK!
+
+###
+MEL REPEAT FOR CONSISTENCY 
+1. preprocess.py (not CQT)
+2. train (edit UTILS if any)
+3. Inference (edit inference.py)
+
+python3 preprocess.py --dataset "C:\DSP19XC3\voice_conversion\data\BumbongMEL" --n_spkrs 2 #USE UBUNTU
+python3 preprocess.py --dataset /mnt/c/DSP19XC3/voice_conversion/data/BumbongMEL --n_spkrs 2 #USE UBUNTU
+
+python3 train.py --model_name BumbongMEL --dataset ../data/BumbongMEL --n_spkrs 2 --n_epochs 51 
+python3 inference.py --model_name BumbongMEL --epoch 50 --trg_id 2 --wavdir C:/DSP19XC/ProlongedData 
+#####--img_height 100
+
+C:/DSP19XC/ProlongedData
+
+MEL: STOP AT DATA-210. Redo inference later. #OK
+
