@@ -49,13 +49,10 @@ sudo apt install python3-pip
 sudo apt-get install build-essential libasound2-dev libjack-dev portaudio19-dev ffmpeg
 ```
 
-## 3 EVALUATION: FAD (UBUNTU X)
+## 3 EVALUATION: FAD (UBUNTU 18.04.x)
 - Use **Python 3.7** (you may switch the Python version on the Ubuntu 18 setup on #1)
 - No need to use virtualenv or conda.
 - Reference Code is also from [VAE-GAN](https://github.com/RussellSB/tt-vae-gan/tree/e530888af4841cba78a77cda08f8b9dd33dfbd0b/fad/frechet_audio_distance)
 
-The command lines are listed below:
-```bash
-python -m pip install -r requirements_fad.txt
-```
-
+## FINAL PRODUCT (SoundFont)
+- TO BE UPDATED
