@@ -1,8 +1,9 @@
 # ECE198X: GANSynth-based Bumbong Bamboo Instrument Synthesis as SoundFont
 
-THESIS Topic: GANSynth-based Bumbong Bamboo Instrument Synthesis as SoundFont
+- THESIS Topic: GANSynth-based Bumbong Bamboo Instrument Synthesis as SoundFont
 Solo Thesis Topic by Ryle Emmanuel Raagas (DSP)
-Advisers: Crisron Lucas, Carl Tolentino, Jose Marie Mendoza
+
+- Advisers: Crisron Lucas, Carl Tolentino, Jose Marie Mendoza
 
 ## METHODOLOGY
 1. Audio Data Collection
@@ -17,14 +18,22 @@ Advisers: Crisron Lucas, Carl Tolentino, Jose Marie Mendoza
 - WSL Install of Ubuntu 18.x (VAE-GAN) and Ubuntu 20.x (Magenta/GANSynth)
 - Others: Secondary Storage with NTFS format only for FAD (has issues on exFAT)
 
+## PC Specifications used in this project
+- CPU: Intel Core i3-10100F (4C/8T) Processor
+- GPU: NVIDIA GTX 1660 SUPER 6GB GDDR6
+- RAM: 16GB DDR4 TOTAL
+
 ## GENERAL INSTALLATION
-- Enable WSL feature of Windows 10/11 via https://learn.microsoft.com/en-us/windows/wsl/install. Make sure Virtualization is enabled on BIOS.
+- Enable [WSL feature of Windows 10/11](https://learn.microsoft.com/en-us/windows/wsl/install). Make sure Virtualization is enabled on BIOS.
 - Install Ubuntu 18.04.x and Ubuntu 20.04.x WSL using Microsoft Store
 - Make sure to update NVIDIA Drivers to latest version.
 - INSTALL [CUDA](https://docs.nvidia.com/cuda/wsl-user-guide/index.html) and [CUDNN](https://docs.nvidia.com/deeplearning/cudnn/install-guide/index.html) on both Ubuntu WSLs.
 
+## 0 AUDIO DATA COLLECTION
+For privacy purposes, the Bumbong audio dataset will not be uploaded here. The audio files were provided by one of the advisers for the [Bamboo project](https://phbmi.com/) with 240 audio files in total.
+
 ## 1 PREPROCESS VAE-GAN (UBUNTU 18.04.x)
-- Use Python 3.8 only. Different version may cause install errors.
+- Use **Python 3.8** only. Different version may cause install errors.
 - Uses only the voice_conversion part of the VAE-GAN repository (split into CQT and MEL)
 - See respective folders (VAE-GAN CQT and VAE-GAN MEL for instructions)
 - VAE-GAN is originally made to convert/inverse MEL.
@@ -39,7 +48,7 @@ Note: FFMPEG is required on FAD which is also used on VAE-GAN.
 
 ## 2 GANSYNTH (UBUNTU 20.04.x)
 - Follow the instructions for installing Magenta for [GANSynth](https://github.com/magenta/magenta/tree/main/magenta/models/gansynth).
-- For simplicity, use the MINICONDA track and see the 2 GANSynth Folder. See below:
+- For simplicity, use the MINICONDA track and see the 2 GANSynth Folder. 
 
 **IMPORTANT!** Update Ubuntu & install dependencies
 ```bash
@@ -55,4 +64,4 @@ sudo apt-get install build-essential libasound2-dev libjack-dev portaudio19-dev 
 - Reference Code is also from [VAE-GAN](https://github.com/RussellSB/tt-vae-gan/tree/e530888af4841cba78a77cda08f8b9dd33dfbd0b/fad/frechet_audio_distance)
 
 ## FINAL PRODUCT (SoundFont)
-- TO BE UPDATED
+- TO BE UPDATED. This project is still ongoing.
