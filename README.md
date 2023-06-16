@@ -1,6 +1,6 @@
-# ECE198X: GANSynth-based Bumbong Bamboo Instrument Synthesis as SoundFont
+# ECE198X: 
 
-- THESIS Topic: GANSynth-based Bumbong Bamboo Instrument Synthesis as SoundFont
+- THESIS Topic: A Study on Audio Input Representations onGANSynth MIDI Synthesizer for Bumbong Bamboo Instrument
 Solo Thesis Topic by Ryle Emmanuel Raagas (DSP)
 
 - Advisers: Crisron Lucas, Carl Tolentino, Jose Marie Mendoza
@@ -9,13 +9,13 @@ Solo Thesis Topic by Ryle Emmanuel Raagas (DSP)
 1. Audio Data Collection
 2. Data Prepocessing (Spectrograms and VAE-GAN)
 3. GANSynth Audio Synthesis
-4. Evaluations (FAD, 2IFC, etc).
+4. Evaluations (FAD, MOS).
 
 ## Prerequisites and other requirements
 - Windows 10/11 version 22H2 and later
 - CPU with AVX2 (e.g. Intel Core or AMD Ryzen series)
-- GPU - NVIDIA Graphics Card (Supports CUDA 11.x and later)
-- WSL Install of Ubuntu 18.x (VAE-GAN) and Ubuntu 20.x (Magenta/GANSynth)
+- GPU - Any recent NVIDIA Graphics Card
+- Microsoft Store Installation of Ubuntu 18.x (VAE-GAN) and Ubuntu 20.x (Magenta/GANSynth) WSLs
 - Others: Secondary Storage with NTFS format only for FAD (has issues on exFAT)
 
 ## PC Specifications used in this project
@@ -63,5 +63,6 @@ sudo apt-get install build-essential libasound2-dev libjack-dev portaudio19-dev 
 - No need to use virtualenv or conda.
 - Reference Code is also from [VAE-GAN](https://github.com/RussellSB/tt-vae-gan/tree/e530888af4841cba78a77cda08f8b9dd33dfbd0b/fad/frechet_audio_distance)
 
-## FINAL PRODUCT (SoundFont)
-- TO BE UPDATED. This project is still ongoing.
+## FINAL PRODUCT
+- TO BE UPDATED. This project is still ongoing (not yet finish).
+- References to follow
