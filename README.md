@@ -3,6 +3,8 @@
 - THESIS Topic: A Study on Audio Input Representations onGANSynth MIDI Synthesizer for Bumbong Bamboo Instrument
 Solo Thesis Topic by Ryle Emmanuel Raagas (DSP)
 
+Google Drive Link (non-codes): [HERE](https://drive.google.com/drive/folders/1WdxI_iMl7stvap7ntLjPAhFy5WPrWikx?usp=sharing) 
+
 - Advisers: Crisron Lucas, Carl Tolentino, Jose Marie Mendoza
 
 ## METHODOLOGY
@@ -63,6 +65,6 @@ sudo apt-get install build-essential libasound2-dev libjack-dev portaudio19-dev 
 - No need to use virtualenv or conda.
 - Reference Code is also from [VAE-GAN](https://github.com/RussellSB/tt-vae-gan/tree/e530888af4841cba78a77cda08f8b9dd33dfbd0b/fad/frechet_audio_distance)
 
-## FINAL PRODUCT
-- TO BE UPDATED. This project is still ongoing (not yet finish).
-- References to follow
+## FINAL PRODUCT/RESULTS
+- Files such as the thesis paper, MIDI, evaluation audio, the Bumbong SoundFont SF2, and original GANSynth output audio can be found via [Google Drive](https://drive.google.com/drive/folders/1WdxI_iMl7stvap7ntLjPAhFy5WPrWikx?usp=sharing) with UPD-EEEI account access only. 
+- References to be updated but can be seen in the thesis paper uploaded in the Google Drive link above.
